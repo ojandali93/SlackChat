@@ -6,6 +6,16 @@ $(document).ready(()=>{
   // Get the online users from the server
   socket.emit('get online users');
 
+  $('#new-channel-btn').click( () => {
+    let newChannel = $('#new-channel-input').val();
+  
+    if(newChannel.length > 0){
+      // Emit the new channel to the server
+      socket.emit('new channel', newChannel);
+      $('#new-channel-input').val("");
+    }
+  });
+
   $('#create-user-btn').click((e)=>{
     e.preventDefault();
     if($('#username-input').val().length > 0){
