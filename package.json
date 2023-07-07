@@ -1,0 +1,25 @@
+{
+  "name": "slackchat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ojandali93/Chappenge1BEW.git"
+  },
+  "author": "Omar Jandali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ojandali93/Chappenge1BEW/issues"
+  },
+  "homepage": "https://github.com/ojandali93/Chappenge1BEW#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "mongoose": "^7.3.2",
+    "socket.io": "^4.7.1"
+  }
+}
