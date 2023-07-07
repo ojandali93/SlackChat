@@ -6,6 +6,13 @@ $(document).ready(()=>{
   // Get the online users from the server
   socket.emit('get online users');
 
+  socket.emit('user changed channel', "General");
+
+  $(document).on('click', '.channel', (e)=>{
+    let newChannel = e.target.textContent;
+    socket.emit('user changed channel', newChannel);
+  });
+
   $('#new-channel-btn').click( () => {
     let newChannel = $('#new-channel-input').val();
   
