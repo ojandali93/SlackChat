@@ -10,7 +10,7 @@ app.use('/public', express.static('public'))
 //Socket.io
 const io = require('socket.io')(server);
 io.on("connection", (socket) => {
-  console.log("🔌 New user connected! 🔌");
+  require('./sockets/chat.js')(io, socket);
 })
 
 
