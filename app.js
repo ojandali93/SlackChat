@@ -9,8 +9,11 @@ app.use('/public', express.static('public'))
 
 //Socket.io
 const io = require('socket.io')(server);
+//We'll store our online users here
+let onlineUsers = {};
 io.on("connection", (socket) => {
-  require('./sockets/chat.js')(io, socket);
+  // Make sure to send the users to our chat file
+  require('./sockets/chat.js')(io, socket, onlineUsers);
 })
 
 
